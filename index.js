@@ -2,8 +2,10 @@ const { debug, error, warn, info } = require('./util/chalkhelper.js')
 console.log(debug('DEBUG: Initializing...'))
 const { performance } = require('perf_hooks');
 var startTime = performance.now()
-const TOKEN = process.env['TOKEN']
-const MONGO_URI = process.env['MONGO_URI']
+const dotenv = require("dotenv");
+dotenv.config();
+const TOKEN = process.env.TOKEN;
+const MONGO_URI = process.env.MONGO_URI
 const Discord = require('discord.js')
 const { Intents } = require('discord.js')
 const path = require('path')
@@ -12,7 +14,6 @@ const uuid = require("uuid")
 const { v4: uuidv4 } = require("uuid");
 const errID = uuidv4()
 const mongo = require('./mongo')
-require('dotenv').config()
 
 const client = new Discord.Client({
   intents: [
