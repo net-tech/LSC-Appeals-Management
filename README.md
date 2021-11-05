@@ -12,6 +12,7 @@ switch(developers) {
     break;
 }
 
+
 const embed = new Discord.MesageEmbed()
   .setTitle("Dumbest Things Coded")
   .addField("setGreen(GREEN)", "Blizzy - 31. Oct. 2021")
