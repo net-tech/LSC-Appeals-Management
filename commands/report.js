@@ -28,17 +28,23 @@ module.exports = {
     }
     const thismsg = message
     if (selctedcmd === 'verify') {
-      await message.channel.messages.fetch(messageid).catch((error) => {
+
+      if (args.length > 10) {
+        message.reply(`You can only verify up to 10 messages at a time.`)
+      }
+      thismsg.delete(1)
+      args.forEach(async (arg) => {
+      await message.channel.messages.fetch(arg).catch((error) => {
         if(error.message.includes("DiscordAPIError: Unknown Message")) {
-          message.reply({ content: `<:error:903756758995042344> Error: \`\`\`js\nUnknown Message.\n\`\`\`Please make that you are running this command in the channel` })
+          message.reply({ content: `<:error:903756758995042344> Error for message id \`${arg}\`: \`\`\`js\nUnknown Message.\n\`\`\`Please make that you are running this command in the channel` })
         }
         message.reply({ content: `\`\`\`js\n${error}\n\`\`\`` })
         return;
       })
       .then((message) => {
         message.react('<:check:903756666615517214> ')
-        thismsg.delete(1)
       })
-    }
+      })
   }
+}
 }

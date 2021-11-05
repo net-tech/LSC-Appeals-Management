@@ -8,14 +8,16 @@ module.exports = {
   description: "Executute LSC verification functions.",
   cooldown: "3s",
   guildOnly: false,
-  slash: 'both',
+  slash: false,
   ownerOnly: false,
   testOnly: false,
   callback: async ({ client, interaction, message, args }) => {
 
-    if(interaction) {
-      
-    }
+    //make a new embed asking the user who invited them, which server they are representing and if they are the owner or management member of that server
+    const embed = new Discord.MessageEmbed()
+      .setTitle("Verification")
+      .setDescription("Please provide the following information to verify your account. \n 1.) Who invited you? 2.) Which server are you representing? 3.) Are you the owner or ")
+
     if(message && args[0] === "temporary") {
       let regex = /\d{17,20}/g;
       let userID;

@@ -16,43 +16,45 @@ module.exports = {
     message.guild.members.cache;
     let member = message.member
     const type = args[0]
-    let confirm = new Discord.MessageEmbed()
+    let confirmadd = new Discord.MessageEmbed()
       .setTitle("Role(s) Added")
       .setColor("GREEN")
+    let confirmremove = new Discord.MessageEmbed()
+      .setTitle("Role(s) Removed")
+      .setColor("GREEN")
+
+    function assignRole(member, role) {
+      if(!member.roles.cache.has(role)) {
+        member.roles.add(role)
+        message.reply({embeds: [confirmadd]})
+      } else {
+        member.roles.remove(role)
+        message.reply({embeds: [confirmremove]})
+      }
+    }
+
     if (!type) {
       message.reply("<:cancel:903756649636966440> Please state a role type value.")
       return;
     } else if (type == "announcements") {
-      member.roles.add("904776470059175937")
-      message.reply({ embeds: [confirm] })
+      assignRole(member, "904776470059175937")
     } else if (type == "developer") {
-      member.roles.add("904776970133463050")
-      message.reply({ embeds: [confirm] })
+      assignRole(member, "904776970133463050")
     } else if (type == "alert") {
-      member.roles.add("904777076811399268")
-      message.reply({ embeds: [confirm] })
+      assignRole(member, "904777076811399268")
     } else if (type == "appeals") {
-      member.roles.add("873006630474768455")
-      message.reply({ embeds: [confirm] })
+      assignRole(member, "873006630474768455")
     } else if (type == "security") {
-      member.roles.add("904777294952931388")
-      message.reply({ embeds: [confirm] })
+      assignRole(member, "904777294952931388")
     } else if (type == "all") {
       member.roles.add("904776470059175937")
       member.roles.add("904776970133463050")
       member.roles.add("904777076811399268")
       member.roles.add("873006630474768455")
       member.roles.add("904777294952931388")
-      message.reply({ embeds: [confirm] })
+      message.reply({ embeds: [confirmadd] })
     } else {
       message.reply("Oops, you need to provde a valid role. Check the pinned messages in the LSC bot commands channel!")
     }
   },
 };
-
-/* Chat:
-
-Just use a array of role ID's
-I'm gonna try it like this just to troubleshoot
-Brb
-*/
