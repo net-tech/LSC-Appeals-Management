@@ -1,5 +1,5 @@
 {
-  "name": "LSC-Appeals-Management",
+  "name": "lsc-appeals-management",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,13 @@
   "devDependencies": {
     "node": "^16.13.0"
   },
-  "description": ""
+  "description": "```js message.readme.send(\"A bot used for basic management of the LOA Safety Centre\")",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tm21cy/LSC-Appeals-Management.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tm21cy/LSC-Appeals-Management/issues"
+  },
+  "homepage": "https://github.com/tm21cy/LSC-Appeals-Management#readme"
 }

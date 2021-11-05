@@ -25,15 +25,15 @@ module.exports = {
       .setColor(`${embedColor}`)
     if(server == "lsc"){
       client.guilds.cache.get('833599402802413598').channels.cache.get('833606008143872000').send(`<@${rolepingID}>`, {
-        embeds: embed
+        embed: embed
       })
     } else if(server == "appeals") {
       client.guilds.cache.get('903693464045223957').channels.cache.get('904460985677516811').send(`<@${rolepingID}>`, {
-        embeds: embed
+        embed: embed
       })
     } else if(server == "ac") {
       client.guilds.cache.get('903693464045223957').channels.cache.get('904461796239360100').send(`<@${rolepingID}>`, {
-        embeds: embed
+        embed: embed
       })
     }
   } 
