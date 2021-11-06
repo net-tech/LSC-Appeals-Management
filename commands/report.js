@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["rc"],
   name: "report",
   category: "Utility",
-  description: "Executute LSC report management functions.",
+  description: "Execute LSC report management functions.",
   cooldown: "3s",
   guildOnly: false,
   slash: false,

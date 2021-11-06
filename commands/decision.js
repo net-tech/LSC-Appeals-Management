@@ -14,7 +14,7 @@ module.exports = {
   expectedArgs: "<id> <decision> <condition>",
   callback: async ({ client, interaction, message, args }) => {
     // args[0] is the User ID
-    let uid = args[0]; // uid
+    let userID = args[0]; // uid
     let caseid = args[1]; // case id
     let decision = args[2]; // decision
     let cond = args[3]; // conditional boolean (t/f)
