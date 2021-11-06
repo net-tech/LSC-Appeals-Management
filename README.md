@@ -26,7 +26,7 @@ const funnyWordsSaid = {
 }
 
 if(1 + 1 === 2) {
-  console.log("Copyright 2021, LOA Network, All rights reserved.")
+  console.log("Copyright 2021, LOA Network, All rights reserved. Any unauthorized derivative works will result in a network wide blacklist.")
 } else {
   console.error("ERR: Basic mathematics does not exist anymore!")
 }
