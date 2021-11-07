@@ -17,18 +17,18 @@ module.exports = {
     let rolepingID = args[1]
     let embedColor = args[2]
     let anmessage = args.slice(3).join(" ")
-    let author = message.member.username
+    let author = message.member.name
 
     const embed = new Discord.MessageEmbed()
       .setTitle(`New Announcement from ${author}.`)
       .setDescription(`${anmessage}`)
       .setColor(`${embedColor}`)
     if(server == "lsc"){
-      client.guilds.cache.get('833599402802413598').channels.cache.get('833606008143872000').send({content: `<@${rolepingID}>`, embeds: [embed] })
+      client.guilds.cache.get('833599402802413598').channels.cache.get('833606008143872000').send({content: `<@&${rolepingID}>`, embeds: [embed] })
     } else if(server == "appeals") {
-      client.guilds.cache.get('903693464045223957').channels.cache.get('904460985677516811').send({content: `<@${rolepingID}>`, embeds: [embed] })
+      client.guilds.cache.get('903693464045223957').channels.cache.get('904460985677516811').send({content: `<@&${rolepingID}>`, embeds: [embed] })
     } else if(server == "ac") {
-      client.guilds.cache.get('903693464045223957').channels.cache.get('904461796239360100').send({content: `<@${rolepingID}>`, embeds: [embed] })
+      client.guilds.cache.get('903693464045223957').channels.cache.get('904461796239360100').send({content: `<@&${rolepingID}>`, embeds: [embed] })
     }
   } 
 } 
