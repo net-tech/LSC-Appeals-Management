@@ -17,7 +17,7 @@ module.exports = {
     let rolepingID = args[1]
     let embedColor = args[2]
     let anmessage = args.slice(3).join(" ")
-    let author = message.member.name
+    let author = message.author.member.name
 
     const embed = new Discord.MessageEmbed()
       .setTitle(`New Announcement from ${author}.`)
