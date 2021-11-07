@@ -18,7 +18,7 @@ module.exports = {
     let rolepingID = args[2]
     let embedColor = args[3]
     let anmessage = args.slice(4).join(" ")
-
+    message.delete(1);
     const embed = new Discord.MessageEmbed()
       .setTitle(`New Announcement from ${author}.`)
       .setDescription(`${anmessage}`)
@@ -30,5 +30,6 @@ module.exports = {
     } else if(server == "ac") {
       client.guilds.cache.get('903693464045223957').channels.cache.get('904461796239360100').send({content: `<@&${rolepingID}>`, embeds: [embed] })
     }
+    message.channel.send("Announced!")
   } 
 } 

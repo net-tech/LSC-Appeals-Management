@@ -11,9 +11,10 @@ module.exports = {
   ownerOnly: false,
   testOnly: false,
   callback: async ({ client, interaction, message, args }) => {
+    message.delete(1);
     let question = args.slice(0).join(' ')
 
-    message.reply({ content: "Thank you for sending in your question. Someone will be with you shortly to discuss!", ephemeral: true })
+    message.channel.send("Thank you for sending in your question. Someone will be with you shortly to discuss!")
     client.guilds.cache.get('903693464045223957').channels.cache.get('904231118499352586').send(`New question from **${message.author.username}** \`${message.author.id}\`:\n > ${question}`);
 
   }
