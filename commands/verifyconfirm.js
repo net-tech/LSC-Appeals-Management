@@ -13,6 +13,7 @@ module.exports = {
   minArgs: "2",
   expectedArgs: "<userID> <placement>",
   callback: async ({ client, interaction, message, args }) => {
+    message.delete(1)
     if(message.member.id !== "413462464022446084"){
       message.channel.send("You do not have the appropriate permissions to use this command!")
       return;
