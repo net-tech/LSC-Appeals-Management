@@ -14,10 +14,10 @@ module.exports = {
   expectedArgs: "<server> <rolepingID> <color> <message>",
   callback: async ({ client, interaction, message, args }) => {
     let server = args[0]
-    let rolepingID = args[1]
-    let embedColor = args[2]
-    let anmessage = args.slice(3).join(" ")
-    let author = message.author.member.name
+    let author = args[1]
+    let rolepingID = args[2]
+    let embedColor = args[3]
+    let anmessage = args.slice(4).join(" ")
 
     const embed = new Discord.MessageEmbed()
       .setTitle(`New Announcement from ${author}.`)
