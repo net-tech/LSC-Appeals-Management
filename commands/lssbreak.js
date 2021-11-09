@@ -11,7 +11,7 @@ module.exports = {
   ownerOnly: false,
   testOnly: false,
   callback: async ({ client, interaction, message, args }) => {
-    if (message.guild.id !== 841671029066956831) {
+    if (message.guild.id !== "841671029066956831") {
         message.reply("Sorry, this command can only be used in the LOA Staff Server!")
     } else {
     const time = args[0]
