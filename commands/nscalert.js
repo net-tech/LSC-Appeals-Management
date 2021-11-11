@@ -4,7 +4,7 @@ module.exports = {
   aliases: ["nsca"],
   name: "nsc-alert",
   category: "Utility",
-  description: "Sends the bots ping.",
+  description: "Change the alert level.",
   cooldown: "3s",
   guildOnly: false,
   slash: false,
