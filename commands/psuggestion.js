@@ -14,9 +14,10 @@ module.exports = {
     const suggestion = args[0];
     const embed = new Discord.MessageEmbed()
         .setTitle(`New Suggestion!`)
-        .setAuthor(`<@${message.author.id}>`, message.author.avatarURL)
+        .setAuthor(message.author.username, message.author.avatarURL)
         .setDescription(args[0])
         .setColor("RANDOM")
+        .setFooter("Please review the above suggestion, and reply using the suggest-reply command!")
     if (message.guild.id === "833599402802413598") {
         client.guilds.cache.get('833599402802413598').channels.cache.get('846683365402738698').send({ embeds: [embed] })
     }
