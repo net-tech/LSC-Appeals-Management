@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const { blue, green, red, orange, yellow, purple, pink, gray } = require('../util/colors.js')
 module.exports = {
-  aliases: ["suggest"],
-  name: "suggestion",
+  aliases: ["asuggest"],
+  name: "anon-suggestion",
   category: "Utility",
   description: "Sends a suggestion depending on the server you're in.",
   cooldown: "3s",
