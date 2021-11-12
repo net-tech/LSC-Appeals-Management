@@ -19,7 +19,7 @@ module.exports = {
     const reason = args.slice(1).join(" ")
     if (!authUsers.includes(message.author.id)) {
         message.reply("Sorry, only authorized users can use that. If you feel you should be added, PM the Owner, President of NSC, or a member of Network Management.")
-        break;
+        return
     } else {
         const embed = new Discord.MessageEmbed()
             .setTitle("Alert Level Updated")
