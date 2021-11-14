@@ -51,7 +51,7 @@ module.exports = {
       message.reply("Only one report can be marked as controversial at a time")
   }
   thismsg.delete(1)
-  message.chanel.messages.fetch(arg).catch((error) => {
+  message.channel.messages.fetch(arg).catch((error) => {
     if(error.message.includes("DiscordAPIError: Unknown Message")) {
       message.reply({ content: `<:error:903756758995042344> Error for message ID \`${arg}\`: \`\`\`js\nUnknown Message.\n\`\`\`Please make that you are running this command in the channel of the report.` })
     }
