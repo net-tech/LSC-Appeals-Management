@@ -34,7 +34,6 @@ const logtoChannel = false
 
 process.on("unhandledRejection", (reason, p) => {
   let rr = reason.stack
-  if(!rr.includes("report.js")) return;
   console.log(error("-----------------------------------------------"))
   console.log(error(`ANTI-CRASH | Unhandled Rejection/Catch | ${errID}`));
   console.log(error("-----------------------------------------------"))
