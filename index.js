@@ -80,7 +80,7 @@ client.on('ready', async () => {
     testServers: ['903693464045223957'],
     botOwners: ['461862173044375572', '413462464022446084'],
     defaultLangauge: 'english',
-    ignoreBots: false,
+    ignoreBots: true,
     dbOptions: {
       keepAlive: true,
       useNewUrlParser: true,
