@@ -17,7 +17,7 @@ module.exports = {
   minArgs: 3,
   expectedArgs: '<member to role> <role color(hex)> <role name>',
   callback: async ({ client, message, args }) => {
-    if (!message.member.roles.cache.some(role => role.id === "836858565264146432")) {
+    if (!message.member.roles.cache.some(role => role.id === "913183373428662273")) {
       let MissingRoleEmbed = new Discord.MessageEmbed()
         .setTitle("Access Denied.")
         .setDescription(`<:cancel:903756649636966440>  Only people with the \`Server Staff Team\` role can use this command.`)
