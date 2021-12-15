@@ -50,6 +50,7 @@ module.exports = {
       })
       .then((message) => {
         message.react('<:check:903756666615517214> ')
+        message.crosspost()
       })
       })
   } else if (selectedcmd === 'controversial') {
