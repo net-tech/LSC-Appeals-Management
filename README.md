@@ -1,6 +1,13 @@
 # LSC Management Bot
+
 ```js
-message.readme.send("A bot used for basic management of the LOA Safety Centre")
+throw new Error("This project and repository has been deprecated and is now read-only for archiving purposes.")
+```
+
+---
+
+```js
+message.readme.send("A Discord bot used for basic management of the LOA Safety Centre")
 
 
 switch(developers) {
